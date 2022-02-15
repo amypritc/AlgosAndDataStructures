@@ -1,0 +1,28 @@
+# Breadth First Search (BFS)
+
+```
+ 1 procedure BFS(G, root) is
+ 2      let Q be a queue
+ 3      label root as explored
+ 4      Q.enqueue(root)
+ 5      while Q is not empty do
+ 6          v := Q.dequeue()
+ 7          if v is the goal then
+ 8              return v
+ 9          for all edges from v to w in G.adjacentEdges(v) do
+10              if w is not labeled as explored then
+11                  label w as explored
+12                  Q.enqueue(w)
+```
+
+- commonly used for trees and graphs
+- Time Complexity: O(V + E)
+  - V - number of vertices
+  - E - number of edges
+- Space Complexity: O(V)
+  - V - number of vertices
+
+
+
+Source:
+https://en.wikipedia.org/wiki/Breadth-first_search
